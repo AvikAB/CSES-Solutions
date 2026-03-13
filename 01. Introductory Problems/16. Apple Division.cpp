@@ -45,4 +45,6 @@ int main(){
 This is a subset sum problem where we need to partition the apples into two groups to minimize the weight difference.
 
 Generate all possible subsets and their sum using recursion. Pick and not pick the element and sum it, whose difference is min take that min element and print it.
+
+Time Complexity: O(2^n) where n ≤ 20
 */
