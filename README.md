@@ -4,7 +4,7 @@ Accepted Solutions and Editorials to the CSES problems [CSES Problem Set](https:
 
 | Problem Type            | Number Solved |
 |-------------------------|:-------------:|
-| Introductory Problems   |     15/24     |
+| Introductory Problems   |     18/24     |
 | Sorting and Searching   |     18/35     |
 | Dynamic Programming     |      2/23     |
 | Graph Algorithms        |      0/36     |
