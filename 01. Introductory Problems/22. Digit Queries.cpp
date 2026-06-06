@@ -48,10 +48,6 @@ int main(){
     // }
 }
 
-
-
-
-
 /*
 Method 1: Using Maths
 1. Number length groups: The number can be grouped based on their digit length.
@@ -76,9 +72,77 @@ SC: O(1)
 */
 
 
+
+
 // Method 2: Using Binary Search:
+
+#include<bits/stdc++.h>
+#include<ext/pb_ds/assoc_container.hpp>
+#include<ext/pb_ds/tree_policy.hpp>
+using namespace std;
+using namespace __gnu_pbds;
+
+#define ll long long
+#define nl "\n"
+#define FASTER ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+template <typename T> using ordered_set = tree<T,null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+
+const ll N = 1e5+10;
+const ll mod = 1e9+7;
+const ll INF = 1e9+10;
+
+ll digcnt(ll num){
+    ll digs = 0;
+    ll m = 1;
+    ll cnt = 9;
+    ll start = 1;
+    while(start*10<=num){
+        digs += cnt*m;
+        start *= 10;
+        cnt *= 10;
+        m++;
+    }
+    digs += (num-start+1)*m;
+    return digs;
+}
+
+void solve(){
+    ll q;
+    cin>>q;
+    while(q--){
+        ll k;
+        cin>>k;
+        ll num = 1;
+        ll lo=1, hi=1e18;
+        while(lo<=hi){
+            ll mid = lo+(hi-lo)/2;
+            if(digcnt(mid)>=k){
+                num = mid;
+                hi = mid-1;
+            } else lo = mid+1;
+        }
+        // total digs before 'num'
+        ll digbefore = digcnt(num-1);
+        ll idx = k-digbefore-1;   // 0-based indexing in num
+        string s = to_string(num);
+        cout<<s[idx]<<nl;
+    }
+}
+
+int main(){
+    FASTER
+    // ll t;
+    // cin>>t;
+    // while(t--){
+         solve();
+    // }
+}
 
 /*
 Method 2: Using Binary Search
+We will do binary search on finding the number. Here also like previous math approach.
+Here, digits are monotonic. If before_digs>=k then hi=mid-1, else lo=mid+1.
 
+TC: O(Q*log^2 N)
+SC: O(1)
 */
