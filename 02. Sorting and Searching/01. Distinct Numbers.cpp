@@ -12,3 +12,5 @@ int main(){
     }
     cout<<s.size()<<endl;
 }
+
+// Just take the alements on set and It will given the distinct of every eles.
