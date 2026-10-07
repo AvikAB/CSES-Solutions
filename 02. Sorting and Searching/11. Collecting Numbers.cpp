@@ -54,7 +54,7 @@ So, My first thought was just cnt the decreasing in the given array. And it fail
 So, create a index array & traverse it from left to right. If prev ele is greater than curr ele then we can't
 take the ele in the same round, so that new round happens.
 So, we can add ele in same round when the next ele is smaller than prev ele.
-So, If x comes before (x-1) then its a new round.
+So, If x comes before (x-1) then its a new round. pos[x] < pos[x-1] then cnt++.
 TC: O(n)
 SC: O(n)
 */
