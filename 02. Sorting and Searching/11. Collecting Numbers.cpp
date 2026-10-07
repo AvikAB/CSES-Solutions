@@ -44,9 +44,9 @@ int main(){
 Here 1 to n permutation is given, Task is collect the nums from 1 to n in increasing order from the given array's order.
 
 Example: n = 5, [4,2,1,5,3]
-    In Round 1: takes 1,5, because only these 2 are in increasing order. After taking remove it from the arr.
+    In Round 1: takes 1 only, because the problem says takes 1 to n in increasing order.
     In R-2: takes 2,3.
-    In R-3: takes 4
+    In R-3: takes 4, 5.
     So there is total 3 rounds.
 
 So, My first thought was just cnt the decreasing in the given array. And it fails.
