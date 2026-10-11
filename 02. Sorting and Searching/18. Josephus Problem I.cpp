@@ -1,4 +1,5 @@
 // Main Josephus Problem & its logic:
+// n, k given, every kth person will die (k-1).
 
 // Recursive Way (O(n^2)):
 void josephus(vector<ll>&v, ll k, ll idx){
