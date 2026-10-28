@@ -54,3 +54,22 @@ int main(){
          solve();
     // }
 }
+
+
+
+/*
+Smallest end time < curr arrival time -> we can assign same room.
+Sort by arrival times in ascending order. Using min Heap for that.
+Track the end_time (also update smallest end_time).
+    if(smallest end_time < curr_arrival_time)
+        then_same_room.
+    else
+        new_room.
+
+In heap:
+We will check it in loop, because multiple rooms can be free after the last customer.
+Means free all rooms in heap whose customer has left (same arrival & departure time can be occured).
+Then after the loop:
+    1. If heap is empty -> new_room
+    2. else -> reuse heap.top().room_id.
+*/
