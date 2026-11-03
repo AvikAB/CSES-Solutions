@@ -67,8 +67,11 @@ Yes, classic Binary Search on answer (time).
 If a machine can complete produces K products on x time, then its obviously can produces x+1, x+2,...etc time.
 The question says minimum time to make all t products, so, I need to find first true val of it.
  
-Checker func: Let, we pick a time t(mid).
+Checker func: Let, we pick a time t (mid).
     Products made by machine i = floor(t/a[i]).
+            a[i] times -> 1 products
+        => t (mid) times -> (t/a[i]) profucts
+        
     Total products will be: tot(t) = summation of i=1 to n (t/a[i]).
  
 Search space:
